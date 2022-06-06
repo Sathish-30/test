@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang='en'>
+   <head>
+      <meta http-equiv="Content-Type" content=" charset=utf-8" />
+      <title>Dashboard</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+      <!-- Styles -->
+      <!----------------------- bootstrap css ---------------- -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!----------------------- grid stack css ---------------- -->
+      <link rel="stylesheet" href="css/grid_stack.min.css" />
+
+
+
+      <!-------------------------- this plugin here  ------------------>
+      <link rel="stylesheet" href="js/plugins/jquery_confirm/jquery_confirm.css">
+
+      <link rel="stylesheet" href="js/plugins/colorpicker/bootstrap-colorpicker-plus.min.css">
+
+      <link rel="stylesheet" type="text/css" href="css/dripicon.css" />
+
+
+
+
+      <!--------------------------- custome css  -------------------->
+      <link rel="stylesheet" type="text/css" href="css/home.css" />
+      <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+      <!-- font awesome -->
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
+
+      <!---------------------------- google font Poppins ----------------->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+      <style>
+         html{
+            height: 100% !important;
+            
+         }
+         body{
+            height: 100% !important;
+         }
+         .header-my-account{
+            background-color: #b5c9eb;
+            padding: 15px 20px;
+            /* font-style: italic; */
+            color: rgba(0, 0, 0, 0.651);
+         }
+         .content-area{
+            padding: 0 !important;
+            /* background: red !important; */
+         }
+         .single-count-{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* border: 1px solid; */
+            background: #4472c4;
+         }
+         .single-count- h4{
+            font-size: 35px;
+            color: #fff;
+            font-weight: 600;
+         }
+         .nav-list a span{
+            font-size: 15px !important;
+            font-weight: 400;
+            color: #fff;
+
+         }
+         .activer{
+            font-weight: 500 !important;
+         }
+         .nav-list a i{
+            color: #fff;
+         }
+         aside{
+            background-color: #5163c6 !important;
+            height: 150vh;
+         }
+         .log{
+            font-size: 15px !important;
+            font-weight: 500;
+            color: #fff;
+         }
+         .single-files{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+         }
+         .single-files h4{
+            width: 35%;
+            font-size: 16px;
+            font-weight: 400 !important;
+            color: rgba(0, 0, 0, 0.822);
+         }
+         .single-files div{
+            width: 65%;
+            border: 1px solid #ddd;
+            background-color: #fff;
+         }
+         .single-files div input{
+            width: 100%;
+            padding: 6px 7px;
+            outline: none;
+            border: none;
+         }
+         .single-files div label{
+            border: 1px solid gray;
+            padding: 5px 20px;
+            color: #000;
+            margin-top: 8px;
+            margin-left: 10px;
+            font-size: 15px;
+            margin-right: 5px;
+            background-color: rgb(226, 226, 226);
+            cursor: pointer;
+            
+         }
+         .theme-wrapper{
+            min-height: 100% !important;
+         }
+         .foot-main{
+            position: relative !important;
+            clear: both !important;
+         }
+         .btn-countinue{
+            margin-top: 50px;
+         }
+         .btn-countinue a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 15px 55px;
+            background-color: #4472c4;
+         }
+         footer{
+            background-color: #585858;
+            padding: 15px;
+        }
+      </style>
+
+      <!-------------------- end head -------------->
+   </head>
+   <body class="theme-body">
+      <div class="theme-wrapper">
+         <header>
+            <div class="header-left">
+               <div class="logo"><a href="index.html">
+                  <img width="60px" id="logo_img" src="./img/organizein-logo-main-1.png" class="img-fluid" alt="">
+                  </a>
+               </div>
+               <!-- Logo -->
+            </div>
+            <!-- Header Left -->
+            <div class="header-right">
+               
+               <ul class="top-header-btns">
+                  <li class="dropdown">
+                     <a class="login-user" data-toggle="dropdown" href="#" title=""> <img src="images/img1.jpg" alt=""> </a>
+                     <div class="dropdown-menu  dropdown-menu-right">
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                          <i class="fas fa-user"></i> Profile
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                           <i class="fas fa-cog"></i> Project Setting
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                           <i class="fas fa-database"></i> Billing and Membership
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                           <i class="fab fa-buffer"></i> Feedback or Suggest a feature
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                           <i class="fas fa-user-cog"></i> User access management
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                           <i class="far fa-question-circle"></i> Help Center
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                           <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                     </div>
+                  </li>
+                  <li>
+			            <a class="more-opt-open" href="#" data-rel="tooltip" data-placement="bottom" title="" data-original-title="Demo Settings"><i class="icon dripicons-align-right"></i> </a>
+			      </li>
+               </ul>
+            </div>
+            <!-- Header Right -->
+         </header>
+         <!-- Header -->
+         <!-- TABING HEADER -->
+         <div class="theme-content">
+		            <aside class="console-sidemenu active" id="sidemenu">
+		               <nav>
+		                  
+		                  <ul class="console-menu">
+		                     <li class="nav-list">
+		                        <a href="#" title=""><span>Dashboard</span> <i class="fa-solid fa-arrow-right"></i></a>
+		                     </li>
+		                     <li class="nav-list">
+		                        <a href="#" title=""> <span>Digital Team</span> <i class="fa-solid fa-arrow-right"></i></a>
+		                     </li>
+		                     <li class="nav-list">
+		                        <a href="#" title=""> <span class="activer">Manage Client Account</span> <i class="fa-solid fa-arrow-right"></i></a>
+		                     </li>
+		                  </ul>
+                      
+		               </nav>
+		            </aside>
+	            	<!-- Console Sidemenu -->
+		            <div class="content-area">
+		               
+                     <div class="grid-stack middle__body gs-area">
+		                  <div class="header-my-account">
+                           <h3>Add a Clients Account </h3>
+                        </div>
+                        <div class="container-fluid my-5">
+                           <div class="row">
+                              <div class="col-12 col-md-9 mx-auto">
+                                 <h2 style="color:#000; font-size:30px;";>Personal</h2>
+                                 <!-- 1 -->
+                                 <div class="single-files">
+                                    <h4>Client First Name</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 2 -->
+                                 <div class="single-files">
+                                    <h4>Client Last Name</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 3 -->
+                                 <div class="single-files">
+                                    <h4>Client Email</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 4 -->
+                                 <div class="single-files">
+                                    <h4>Client Password</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 5 -->
+                                 <div class="single-files">
+                                    <h4>Client Address</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 6 -->
+                                 <div class="single-files">
+                                    <h4>Client Phone</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 7 -->
+                                 <div class="single-files">
+                                    <h4>Client Profile Image</h4>
+                                    <div>
+                                       <input id="upload" type="file" hidden>
+                                       <label for="upload">Upload</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-12 col-md-9 mx-auto mb-5">
+                                 <h2 style="color:#000; font-size:30px;";>Company</h2>
+                                 <!-- 7 -->
+                                 <div class="single-files">
+                                    <h4>Company Logo</h4>
+                                    <div>
+                                       <input id="upload" type="file" hidden>
+                                       <label for="upload">Upload</label>
+                                    </div>
+                                 </div>
+                                 <!-- 1 -->
+                                 <div class="single-files">
+                                    <h4>Company Name</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 2 -->
+                                 <div class="single-files">
+                                    <h4>Company Website link</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 3 -->
+                                 <div class="single-files">
+                                    <h4>Client Country</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <!-- 4 -->
+                                 <div class="single-files">
+                                    <h4>Project Start Date</h4>
+                                    <div>
+                                       <input type="text">
+                                    </div>
+                                 </div>
+                                 <div class="text-center btn-countinue">
+                                    <a href="#">Continue Next</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+		               </div>
+		            </div>
+         		</div>
+       <!-- footer section start -->
+<footer>
+   <div class="container">
+       <div class="row">
+           <div class="col-12 col-md-12 d-flex justify-content-center align-items-center text-center">
+               <img width="30px" src="./img/Picture1.png" alt="" class="img-fluid mx-2">
+               <a style="color: rgb(185, 185, 185); font-weight: 500; text-decoration:none;" href="www.organizein.com | KPI Dashboard Admin">
+                   www.organizein.com | KPI Dashboard Admin
+               </a>
+           </div>
+       </div>
+   </div>
+</footer>
+      
+      </div>
+
+      <script>
+         let export__as = document.querySelector('.SElect___head')
+         let _PDF = document.querySelectorAll('.PDF');
+         for(_PDF2 of _PDF){
+            _PDF2.onclick = function(){
+               export__as.innerHTML = this.textContent;
+            }
+         }
+         function toggle(){
+            let Wraper___popup1 = document.querySelector('.Wraper___popup1');
+            let middle__body = document.querySelector('.middle__body');
+            let body = document.getElementsByTagName('body');
+            Wraper___popup1.classList.toggle('active__popup__1');
+            middle__body.classList.toggle('middle__body2');
+            body.classList.toggle('middle__body2');
+         }
+         function toggle2(){
+            let Wraper__popup2 = document.querySelector('.Wraper__popup2');
+            let middle__body = document.querySelector('.middle__body');
+            let body = document.getElementsByTagName('body');
+            Wraper__popup2.classList.toggle('active__popup__2');
+            middle__body.classList.toggle('middle__body2');
+            body.classList.toggle('middle__body2');
+         }
+         function zindex(){
+            let middle__body = document.querySelector('.middle__body');
+            middle__body.classList.toggle('middle__body2');
+         }
+
+
+         let export__as2 = document.querySelector('.SElect___head2')
+         let __PDF2 = document.querySelectorAll('.PDF2');
+         for(x of __PDF2){
+            x.onclick = function () {
+               export__as2.innerHTML = this.textContent;
+            }
+         }
+
+
+         let export__as3 = document.querySelector('.SElect___head3')
+         let _PDF3 = document.querySelectorAll('.PDF3');
+         for(y of _PDF3){
+            y.onclick = function(){
+               export__as3.innerHTML = this.textContent;
+            }
+         }
+
+         let export__as4 = document.querySelector('.SElect___head4')
+         let _PDF4 = document.querySelectorAll('.PDF4');
+         for(z of _PDF4){
+            z.onclick = function(){
+               export__as4.innerHTML = this.textContent;
+            }
+         }
+
+         let export__as5 = document.querySelector('.SElect___head5')
+         let _PDF5 = document.querySelectorAll('.PDF5');
+         for(a of _PDF5){
+            a.onclick = function(){
+               export__as5.innerHTML = this.textContent;
+            }
+         }
+
+         let export__as6 = document.querySelector('.SElect___head6')
+         let _PDF6 = document.querySelectorAll('.PDF6');
+         for(b of _PDF6){
+            b.onclick = function(){
+               export__as6.innerHTML = this.textContent;
+            }
+         }
+
+         let export__as7 = document.querySelector('.SElect___head7')
+         let _PDF7 = document.querySelectorAll('.PDF7');
+         for(c of _PDF7){
+            c.onclick = function(){
+               export__as7.innerHTML = this.textContent;
+            }
+         }
+      </script>
+
+      <script>
+         var two___inde = document.querySelector('.two___inde');
+         var first____in = document.querySelector('.first____in');
+         var third = document.querySelector('.third');
+         var forth = document.querySelector('.forth');
+         var fifth = document.querySelector('.fifth');
+         var sixth = document.querySelector('.sixth');
+         var seventh = document.querySelector('.seventh');
+         function twoinde(){
+            two___inde.classList.add('indicatior__');
+            two___inde.classList.add('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function first(){
+            first____in.classList.add('indicatior__');
+            first____in.classList.add('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function threeinde(){
+            third.classList.add('indicatior__');
+            third.classList.add('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function forthinde(){ 
+            forth.classList.add('indicatior__');
+            forth.classList.add('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function fifthinde(){
+            fifth.classList.add('indicatior__');
+            fifth.classList.add('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function sixthinde(){
+            sixth.classList.add('indicatior__');
+            sixth.classList.add('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function seventhinde(){
+            seventh.classList.add('indicatior__');
+            seventh.classList.add('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+         }
+      </script>
+
+
+      <!-- <script>
+         let currentLocation = location.li;
+         let menuItem = document.querySelectorAll('.b');
+         let menuLength = menuItem.length;
+         for(let i = 0; i < menuLength; i++){
+            if(menuItem[i].li === currentLocation){
+               menuItem[i].className = "indicatior__"
+            }
+         }
+         
+      </script> -->
+
+
+
+
+
+      <script src="js/jquerymain_jquerytouch_jquerycookies.js"></script>
+      <script src="js/bootstrap_popper.min.js"></script>
+      <script src="js/jquery_ui.min.js"></script>
+      <script src="js/grid_stack_pack.min.js"></script>
+      <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+      <script src="js/plugins/chartjs/Chart.bundle.min.js"></script>
+      <script src="js/plugins/colorpicker/bootstrap-colorpicker-plus.min.js"></script>
+      <script src="js/plugins/toaster/jquery.toaster.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/page-level/chartjs/linechart1.js"></script>
+      <script src="js/page-level/chartjs/donutchart1.js"></script>
+      <script src="js/page-level/chartjs/barchart1.js"></script>
+
+
+
+
+
+   </body>
+</html>

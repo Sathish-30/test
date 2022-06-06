@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta http-equiv="Content-Type" content=" charset=utf-8" />
+  <title>Repare this Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <!-- Styles -->
+  <!----------------------- bootstrap css ---------------- -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!----------------------- grid stack css ---------------- -->
+  <link rel="stylesheet" href="css/grid_stack.min.css" />
+
+
+
+  <!-------------------------- this plugin here  ------------------>
+  <link rel="stylesheet" href="js/plugins/jquery_confirm/jquery_confirm.css">
+
+  <link rel="stylesheet" href="js/plugins/colorpicker/bootstrap-colorpicker-plus.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/dripicon.css" />
+
+
+
+
+  <!--------------------------- custome css  -------------------->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!---------------------------- google font Poppins ----------------->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    aside {
+      height: 200vh;
+    }
+
+    .img_comp_logo {
+      border-radius: 50%;
+      width: 10%;
+      position: absolute;
+      border: 2px solid black;
+      border-color: #9BA3EB;
+      margin-top: 50px;
+      margin-left: 20px;
+      z-index: 1;
+    }
+
+    .s1::before {
+      content: "•";
+      padding-right: 0;
+      font-size: 1.5em;
+      margin: 0;
+      display: inline-block;
+      width: initial;
+      float: left;
+      white-space: nowrap
+    }
+  </style>
+  <!-------------------- end head -------------->
+</head>
+
+<body class="theme-body">
+  <div class="theme-wrapper">
+    <header>
+      <div class="header-left">
+        <div class="logo"><a href="index.html">
+            <img width="60px" id="logo_img" src="./img/organizein-logo-main-1.png" class="img-fluid" alt="">
+          </a>
+        </div>
+        <!-- Logo -->
+      </div>
+      <!-- Header Left -->
+      <div class="header-right">
+
+        <ul class="top-header-btns">
+          <li class="dropdown">
+            <a class="login-user" data-toggle="dropdown" href="#" title=""> <img src="images/img1.jpg" alt=""> </a>
+            <div class="dropdown-menu  dropdown-menu-right">
+              <a class="dropdown-item" href="#">
+                <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                <i class="fas fa-user"></i> Profile
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                <i class="fas fa-cog"></i> Project Setting
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                <i class="fas fa-database"></i> Billing and Membership
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                <i class="fab fa-buffer"></i> Feedback or Suggest a feature
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                <i class="fas fa-user-cog"></i> User access management
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                <i class="far fa-question-circle"></i> Help Center
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="#" title=""> <i class="icon dripicons-align-right"></i> </a>
+            <div class="dropdown-menu  dropdown-menu-right">
+              <a class="dropdown-item" href="dashboard.html">
+                Dashboard
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="ChangePass.html">
+                Change Password
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login box.html">
+                Logout
+              </a>
+
+
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Header Right -->
+    </header>
+    <!-- Header -->
+    <!-- TABING HEADER -->
+    <div id="tabing-head">
+      <img class="img_comp_logo" src="images/logo.png" alt="copm_logo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="tab-head-title">
+              <h1>CMIT Solutions of Tribeca Dashboard > WEB</h1>
+            </div>
+          </div>
+          <div class="col-md-12 col-3 tabs">
+            <ul class="head-menu">
+              <li>
+                <div class="head-ic-bg icon-f">
+                  <style>
+                    li.active img.inactive {
+                      display: none;
+                    }
+                  </style>
+                  <a href="index.html">
+                    <img src="./images/Artboard1.svg" class="inactive" alt="icons1">
+                    <img src="./images/hover/Artboard12.svg" class="active" alt="icons1">
+                  </a>
+                </div>
+                </a>
+                <div class="head-title">
+                  <p>KPI</p>
+                </div>
+              </li>
+              <li>
+                <div class="head-ic-bg">
+
+                  <a href="SEO.html">
+                    <img src="./images/Artboard3.svg" class="inactive" alt="icons1">
+                    <img src="./images/hover/Artboard18.svg" class="active" alt="icons1">
+                </div>
+                </a>
+                <div class="head-title">
+                  <p>SEO</p>
+                </div>
+
+              </li>
+              <li>
+                <div class="head-ic-bg">
+                  <a href="sem.html">
+                    <img src="./images/Artboard5.svg" class="inactive" alt="icons1">
+                    <img src="./images/hover/Artboard16.svg" class="active" alt="icons1">
+                  </a>
+                </div>
+                <div class="head-title">
+                  <p>SEM</p>
+                </div>
+              </li>
+              <li>
+                <div class="head-ic-bg ">
+                  <a href="social.html">
+                    <img src="./images/Artboard4.svg" class="inactive" alt="icons1">
+                    <img src="./images/hover/Artboard17.svg" class="active" alt="icons1">
+                  </a>
+                </div>
+                <div class="head-title">
+                  <p>Social</p>
+                </div>
+              </li>
+              <li>
+                <div class="head-ic-bg">
+
+                  <a href="mail.html">
+                    <img src="./images/Artboard2.svg" class="inactive" alt="icons1">
+                    <img src="./images/hover/Artboard13.svg" class="active" alt="icons1"></svg>
+                  </a>
+                </div>
+                <div class="head-title">
+                  <p>Mail</p>
+                </div>
+              </li>
+              <li class="active">
+                <div class="head-ic-bg">
+                  <a href="web.html">
+                    <img src="./images/Artboard9.svg" class="inactive" alt="icons1">
+                    <img src="./images/hover/Artboard10.svg" class="active" alt="icons1">
+                  </a>
+                </div>
+                <div class="head-title">
+                  <p>Web</p>
+                </div>
+              </li>
+              <li>
+                <div class="head-ic-bg">
+                  <a href="">
+                    <img src="./images/Artboard6.svg" class="inactive last____" alt="icons1">
+                    <img src="./images/hover/Artboard15.svg" class="active last____" alt="icons1">
+                    </svg>
+                  </a>
+                </div>
+                <div class="head-title">
+                  <p>More</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="theme-content">
+      <aside class="console-sidemenu active" id="sidemenu">
+        <nav>
+          <div class="user logged-in">
+            <a class="login-user" href="#" title=""><img src="images/img1.jpg" alt=""></a>
+            <div class="user-detail">
+              <strong>Joyce Cabardo</strong>
+              <i>support@joyce.com</i>
+            </div>
+            <i style="font-size: 20px; margin-top: 10px; cursor: pointer;" class="icon dripicons-align-right"></i>
+          </div>
+          <ul class="console-menu">
+            <li class="menu-item-has-children">
+              <a href="#" title=""> <span class=s1><strong>User Experience Stats</strong></span></a>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#" title=""> <span class=s1><strong>Website Speed Stats</strong></span></a>
+            </li>
+
+
+          </ul>
+
+
+        </nav>
+      </aside>
+      <!-- Console Sidemenu -->
+      <div class="content-area">
+        <div id="toparea" class="style1">
+          <div class="console-dashboard-title">
+            <div>
+              <!-- <h1 style="font-weight: 500;">Membership</h1> -->
+            </div>
+          </div>
+        </div>
+
+
+        <div class="grid-stack middle__body body__wpr  gs-area">
+          <div class="">
+            <div class="container-fluid text-center">
+              <div class="row">
+                <div class="col-12 col-md-12">
+                  <div style="min-height: 100%;">
+                    <iframe width="1000" height="1090" src="https://datastudio.google.com/embed/reporting/1Pcbfm3MQKl2teGS5JHSsOHm-VNn4LLZH/page/D47b" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Footer -->
+    <!-- Footer -->
+    <section class="foot-main">
+      <div class="container">
+        <footer class="page-footer font-small blue pt-4">
+          <!-- Footer Links -->
+          <div class="container-fluid text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-5 mt-md-0 mt-3 foot-about">
+                <!-- Content -->
+                <img style="width: 90px; height:90px" src="./img/Picture1.png">
+                <p style="color:black">Organizein Trusted IT & Digital Marketing Agency We will help you take advantage of all that the Internet has to offer. Having a solid inbound strategy with a high ROI is what every business strives for.
+                </p>
+
+              </div>
+              <div class="col-md-2"></div>
+              <!-- Grid column -->
+              <hr class="clearfix w-100 d-md-none pb-3">
+              <!-- Grid column -->
+              <div class="col-md-2 mb-md-0 mb-3">
+                <!-- Links -->
+                <h5 style="color:black">Resouraces</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">Case Studies </a>
+                  </li>
+                  <li>
+                    <a href="#!">Blog </a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 mb-md-0 mb-3">
+                <!-- Links -->
+                <h5 style="color:black">Company</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">About</a>
+                  </li>
+                  <li>
+                    <a href="#!">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+          <!-- Footer Links -->
+          <!-- Footer Bottom -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="footer-social">
+                  <ul>
+                    <li><a href="https://www.facebook.com/organizeindm/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/3273657/admin/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/organizeindm/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCAuvWg57vxGiRcyRV9p3Avw/videos"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="footer-copyright">
+                  <p style="color:black">© 2022 <a href="#" style="color:black">Organizein Internet Marketing Solutions Pvt Ltd </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+
+
+  <script src="js/jquerymain_jquerytouch_jquerycookies.js"></script>
+  <script src="js/bootstrap_popper.min.js"></script>
+  <script src="js/jquery_ui.min.js"></script>
+  <script src="js/grid_stack_pack.min.js"></script>
+
+  <script src="js/script.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

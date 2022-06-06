@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang='en'>
+   <head>
+      <meta http-equiv="Content-Type" content=" charset=utf-8" />
+      <title>Dashboard</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+      <!-- Styles -->
+      <!----------------------- bootstrap css ---------------- -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!----------------------- grid stack css ---------------- -->
+      <link rel="stylesheet" href="css/grid_stack.min.css" />
+
+
+
+      <!-------------------------- this plugin here  ------------------>
+      <link rel="stylesheet" href="js/plugins/jquery_confirm/jquery_confirm.css">
+
+      <link rel="stylesheet" href="js/plugins/colorpicker/bootstrap-colorpicker-plus.min.css">
+
+      <link rel="stylesheet" type="text/css" href="css/dripicon.css" />
+
+
+
+
+      <!--------------------------- custome css  -------------------->
+      <link rel="stylesheet" type="text/css" href="css/home.css" />
+      <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+      <!-- font awesome -->
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
+
+      <!---------------------------- google font Poppins ----------------->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+      <style>
+         .header-my-account{
+            background-color: #b5c9eb;
+            padding: 15px 20px;
+            /* font-style: italic; */
+            color: rgba(0, 0, 0, 0.651);
+         }
+         .content-area{
+            padding: 0 !important;
+            /* background: red !important; */
+         }
+         .single-count-{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* border: 1px solid; */
+            background: #4472c4;
+         }
+         .single-count- h4{
+            font-size: 35px;
+            color: #fff;
+            font-weight: 500;
+         }
+         .nav-list a span{
+            font-size: 15px !important;
+            font-weight: 400;
+            color: #fff;
+
+         }
+         .activer{
+            font-weight: 600 !important;
+         }
+         .nav-list a i{
+            color: #fff;
+         }
+         aside{
+            height: 130vh;
+         }
+         .log{
+            font-size: 15px !important;
+            font-weight: 500;
+            color: #fff;
+         }
+      </style>
+
+      <!-------------------- end head -------------->
+   </head>
+   <body class="theme-body">
+      <div class="theme-wrapper">
+         <header>
+            <div class="header-left">
+               <div class="logo"><a href="index.html">
+                  <img width="60px" id="logo_img" src="./img/organizein-logo-main-1.png" class="img-fluid" alt="">
+                  </a>
+               </div>
+               <!-- Logo -->
+            </div>
+            <!-- Header Left -->
+            <div class="header-right">
+               
+               <ul class="top-header-btns">
+                  <li class="dropdown">
+                     <a class="login-user" data-toggle="dropdown" href="#" title=""> <img src="images/img1.jpg" alt=""> </a>
+                     <div class="dropdown-menu  dropdown-menu-right">
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                          <i class="fas fa-user"></i> Profile
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                           <i class="fas fa-cog"></i> Project Setting
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                           <i class="fas fa-database"></i> Billing and Membership
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                           <i class="fab fa-buffer"></i> Feedback or Suggest a feature
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                           <i class="fas fa-user-cog"></i> User access management
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                           <i class="far fa-question-circle"></i> Help Center
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                           <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                           <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                     </div>
+                  </li>
+                  <li class="dropdown">
+                     <a data-toggle="dropdown" href="#" title=""> <i class="icon dripicons-align-right"></i> </a>
+                     <div class="dropdown-menu  dropdown-menu-right">
+                        <a class="dropdown-item" href="dashboard.html">
+                           Dashboard
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="ChangePass.html">
+                           Change Password
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login box.html">
+                           Logout
+                        </a>
+                       
+                       
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <!-- Header Right -->
+         </header>
+         <!-- Header -->
+         <!-- TABING HEADER -->
+         <div class="theme-content">
+            <aside class="console-sidemenu active" id="sidemenu">
+               <nav>
+                  <div class="user logged-in">
+                     <a class="login-user" href="#" title=""><img src="images/img1.jpg" alt=""></a>
+                     <div class="user-detail">
+                        <strong>Joyce Cabardo</strong>
+                        <i>support@joyce.com</i>
+                     </div>
+                     <i style="font-size: 20px; margin-top: 10px; cursor: pointer;" class="icon dripicons-align-right"></i> 
+                  </div>
+                  <ul class="console-menu">
+                     <li class="menu-item-has-children">
+                        <a href="#" title=""> <span>Visitors Location</span></a>
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="#" title=""> <span>Latest Quote Details</span></a>
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="#" title="">   <span>Page View Dtails</span></a>
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="#" title="">   <span>Real Time Traffic</span></a>
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="#" title="">   <span>Active Tasks To Do</span></a>
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="#" title="">   <span>Team Chart</span></a>
+                     </li>
+                     
+                  </ul>
+                
+               </nav>
+            </aside>
+	            	<!-- Console Sidemenu -->
+		            <div class="content-area">
+		               <!-- <div id="toparea" class="style1"><div class="console-dashboard-title">
+						      <div>
+						            <h1>Hi <strong>Billah</strong>! Welcome</h1>
+						      </div>
+						      <div class="dashboard-title-more">
+						            <div class="dash-info-block">
+                                    <div onclick="zindex()" data-toggle="dropdown" class="dash-info align-items-center d-flex justify-content-between">
+                                       <strong>Custome</strong><i class="fas fa-caret-down"></i>
+                                    </div>
+                                    <div class="dropdown-menu custome__dorpdown dropdown-menu-right">
+                                      
+                                       <a onclick="zindex()" class="dropdown-item" href="#">
+                                          <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                                          Today
+                                       </a>
+                                       <div class="dropdown-divider"></div>
+                                       <a onclick="zindex()" class="dropdown-item" href="#">
+                                          <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                                          Yesterday
+                                       </a>
+                                       <div class="dropdown-divider"></div>
+                                       <a onclick="zindex()" class="dropdown-item" href="#">
+                                          <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                          Last 7 Days
+                                       </a>
+                                       <div class="dropdown-divider"></div>
+                                       <a onclick="zindex()" class="dropdown-item" href="#">
+                                          <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                          Last 30 Days
+                                       </a>
+                                       
+                                    </div>
+						                  <div class="dash-info"><strong>Start Date</strong><input type="date" name=""></div>
+						                  <div class="dash-info"><strong>End Date</strong> <input type="date" name=""></div>
+						            </div>
+                        
+                        <div class="export-btn">
+  						            <a onclick="toggle()" class="theme-btn" href="#" title=""><i class="icon dripicons-export"></i> Export</a>
+
+                                <div class="Wraper___popup1">
+                                    <div class="box____1">
+                                       <div class="d-flex justify-content-between align-items-center">
+                                          <h2>Export Dashboard</h2> <i onclick="toggle()" class="fas fa-times"></i>
+                                       </div>
+                                       <div class="export___dasbord__details">
+
+                                          <p>Allaws you to Download or schedule automatic email report of your dota in PNG, JPEG, SVG and CSV formates</p>
+                                       </div>
+
+                                       <div class="d-flex py-3 export__as1 justify-content-between align-itmes-center">
+
+                                          <strong class="export__as">Export as :</strong><div data-toggle="dropdown"  class="d-flex justify-content-between select__div align-itmes-center">
+                                             <strong class="SElect___head">Select Optins</strong> <i class="fas fa-chevron-down"></i>
+
+
+                                             <div class="dropdown-menu pDf___ dropdown-menu-right">
+                                      
+                                                <a class="dropdown-item PDF" href="#">
+                                                   <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                                                   PDF
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF" href="#">
+                                                   <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                                                   JPEG
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   SVG
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   CSV
+                                                </a>
+                                                
+                                             </div>
+                                          </div>
+
+                                       </div>
+                                       <div class="text-center mt-5 mb-2">
+                                          <button class="save_____popup1">SAVE</button> &nbsp;&nbsp;&nbsp;&nbsp;
+                                          <button class="cancel_____popup1">CANCEL</button>
+                                       </div>
+                                    </div>
+                                </div>
+
+
+  						            <a onclick="toggle2()" class="theme-btn btn-danger" href="#" title=""><i class="icon dripicons-export"></i> Export</a>
+
+                                <div class="Wraper__popup2">
+                                    <div class="box___2">
+                                       <div class="d-flex justify-content-between align-items-center">
+                                          <h2>Add Widgets to KPI dash board</h2><i onclick="toggle2()" class="fas fa-times"></i>
+                                       </div>
+                                       <div class="d-flex pt-3 pb-3 justify-content-between align-itmes-center">
+
+                                          <strong class="export__as2">Select Data Source :</strong><div data-toggle="dropdown"  class="d-flex justify-content-between select__div2 align-itmes-center">
+                                             <strong class="SElect___head2">Google Analytics(CMIT sol.)</strong> <i class="fas fa-chevron-down"></i>
+
+
+                                             <div class="dropdown-menu pDf___2 dropdown-menu-right">
+                                      
+                                                <a class="dropdown-item PDF2" href="#">
+                                                   <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                                                   A
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF2" href="#">
+                                                   <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                                                   B
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF2" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   C
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF2" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   D
+                                                </a>
+                                                
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+                                       <div class="d-flex pb-3 justify-content-between align-itmes-center">
+                                       <strong class="export__as2">Widget destination :</strong><div data-toggle="dropdown"  class="d-flex justify-content-between select__div2 align-itmes-center">
+                                          <strong class="SElect___head3">KPI Dashboard main</strong> <i class="fas fa-chevron-down"></i>
+
+
+                                          <div class="dropdown-menu pDf___2 dropdown-menu-right">
+                                   
+                                             <a class="dropdown-item PDF3" href="#">
+                                                <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                                                A
+                                             </a>
+                                             <div class="dropdown-divider"></div>
+                                             <a class="dropdown-item PDF3" href="#">
+                                                <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                                                B
+                                             </a>
+                                             <div class="dropdown-divider"></div>
+                                             <a class="dropdown-item PDF3" href="#">
+                                                <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                C
+                                             </a>
+                                             <div class="dropdown-divider"></div>
+                                             <a class="dropdown-item PDF3" href="#">
+                                                <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                D
+                                             </a>
+                                             
+                                          </div>
+                                          </div>
+                                       </div>
+
+
+                                       <div class="d-flex pb-3 justify-content-between align-itmes-center">
+                                          <strong class="export__as2">Widget Title :</strong><div data-toggle="dropdown"  class="d-flex justify-content-between select__div2 align-itmes-center">
+                                             <strong class="SElect___head4">Title here</strong> <i class="fas fa-chevron-down"></i>
+   
+   
+                                             <div class="dropdown-menu pDf___2 dropdown-menu-right">
+                                      
+                                                <a class="dropdown-item PDF4" href="#">
+                                                   <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                                                   A
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF4" href="#">
+                                                   <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                                                   B
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF4" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   C
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF4" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   D
+                                                </a>
+                                                
+                                             </div>
+                                             </div>
+                                       </div>
+
+
+                                       <div class="d-flex pb-3 justify-content-between align-itmes-center">
+                                          <strong class="export__as2">Chart Type :</strong><div data-toggle="dropdown"  class="d-flex justify-content-between select__div2 align-itmes-center">
+                                             <strong class="SElect___head5">Select</strong> <i class="fas fa-chevron-down"></i>
+   
+   
+                                             <div class="dropdown-menu pDf___2 dropdown-menu-right">
+                                      
+                                                <a class="dropdown-item PDF5" href="#">
+                                                   <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                                                   A
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF5" href="#">
+                                                   <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                                                   B
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF5" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   C
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF5" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   D
+                                                </a>
+                                                
+                                             </div>
+                                             </div>
+                                       </div>
+
+
+                                       <div class="d-flex pb-3 justify-content-between align-itmes-center">
+                                          <strong class="export__as2">Metric :</strong><div data-toggle="dropdown"  class="d-flex justify-content-between select__div2 align-itmes-center">
+                                             <strong class="SElect___head6">Select</strong> <i class="fas fa-chevron-down"></i>
+   
+   
+                                             <div class="dropdown-menu pDf___2 dropdown-menu-right">
+                                      
+                                                <a class="dropdown-item PDF6" href="#">
+                                                   <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                                                   A
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF6" href="#">
+                                                   <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                                                   B
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF6" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   C
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF6" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   D
+                                                </a>
+                                                
+                                             </div>
+                                             </div>
+                                       </div>
+
+
+                                       <div class="d-flex pb-3 justify-content-between align-itmes-center">
+                                          <strong class="export__as2">Segment :</strong><div data-toggle="dropdown"  class="d-flex justify-content-between select__div2 align-itmes-center">
+                                             <strong class="SElect___head7">Select</strong> <i class="fas fa-chevron-down"></i>
+   
+   
+                                             <div class="dropdown-menu pDf___2 dropdown-menu-right">
+                                      
+                                                <a class="dropdown-item PDF7" href="#">
+                                                   <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                                                   A
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF7" href="#">
+                                                   <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+                                                   B
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF7" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   C
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item PDF7" href="#">
+                                                   <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+                                                   D
+                                                </a>
+                                                
+                                             </div>
+                                             </div>
+                                       </div>
+                                    
+                                       <div class="text-center mt-3 mb-2">
+                                          <button class="save_____popup1">SAVE</button> &nbsp;&nbsp;&nbsp;&nbsp;
+                                          <button class="cancel_____popup1">CANCEL</button>
+                                       </div>
+                                    
+                                    </div>
+                                </div>
+
+                        </div>
+						      </div>
+						   </div>
+						   </div> -->
+		               <div class="grid-stack middle__body gs-area">
+		                  <div class="header-my-account">
+                           <h3>Dashboard View</h3>
+                        </div>
+                        <div class="container-fluid">
+                           <div class="row">
+                              <div class="col-12 my-3 col-md-3 col-lg-3">
+                                 <div class="single-count-">
+                                    <h4>34k</h4>
+                                 </div>
+                                 <h4 style="color: rgba(0, 0, 0, 0.884);" class="text-center my-1">Total Client</h4>
+                              </div>
+                              <div class="col-12 my-3 col-md-3 col-lg-3">
+                                 <div class="single-count-">
+                                    <h4>34k</h4>
+                                 </div>
+                                 <h4 style="color: rgba(0, 0, 0, 0.884);" class="text-center my-1">Total Client</h4>
+                              </div>
+                              <div class="col-12 my-3 col-md-3 col-lg-3">
+                                 <div class="single-count-">
+                                    <h4>34k</h4>
+                                 </div>
+                                 <h4 style="color: rgba(0, 0, 0, 0.884);" class="text-center my-1">Total Client</h4>
+                              </div>
+                              <div class="col-12 my-3 col-md-3 col-lg-3">
+                                 <div class="single-count-">
+                                    <h4>34k</h4>
+                                 </div>
+                                 <h4 style="color: rgba(0, 0, 0, 0.884);" class="text-center my-1">Total Client</h4>
+                              </div>
+                              <div class="col-12 my-3 col-md-3 col-lg-3">
+                                 <div class="single-count-">
+                                    <h4>34k</h4>
+                                 </div>
+                                 <h4 style="color: rgba(0, 0, 0, 0.884);" class="text-center my-1">Total Client</h4>
+                              </div>
+                             
+
+                           </div>
+                        </div>
+		               </div>
+		            </div>
+         		</div>
+      <!-- Footer -->
+      <!-- Footer -->
+      <section class="foot-main">
+         <div class="container">
+           <footer class="page-footer font-small blue pt-4">
+           <!-- Footer Links -->
+           <div class="container-fluid text-center text-md-left">
+             <!-- Grid row -->
+             <div class="row">
+               <!-- Grid column -->
+               <div class="col-md-5 mt-md-0 mt-3 foot-about">
+                 <!-- Content -->
+                   <img style="width: 90px; height:90px" src="./img/Picture1.png">
+                 <p>Organizein Trusted IT & Digital Marketing Agency We will help you take advantage of all that the Internet has to offer. Having a solid inbound strategy with a high ROI is what every business strives for.
+                 </p>
+ 
+               </div>
+               <div class="col-md-2"></div>
+               <!-- Grid column -->
+               <hr class="clearfix w-100 d-md-none pb-3">
+               <!-- Grid column -->
+               <div class="col-md-2 mb-md-0 mb-3">
+                 <!-- Links -->
+                  <h5 >Resouraces</h5> 
+                 <ul class="list-unstyled">
+                   <li>
+                     <a href="#!">Case Studies </a>
+                   </li>
+                   <li>
+                     <a href="#!">Blog </a>
+                   </li>
+                 </ul>
+ 
+               </div>
+               <!-- Grid column -->
+ 
+               <!-- Grid column -->
+               <div class="col-md-2 mb-md-0 mb-3">
+                 <!-- Links -->
+                  <h5>Company</h5> 
+                 <ul class="list-unstyled">
+                   <li>
+                     <a href="#!">About</a>
+                   </li>
+                   <li>
+                     <a href="#!">Contact Us</a>
+                   </li>
+                 </ul>
+               </div>
+               <!-- Grid column -->
+             </div>
+             <!-- Grid row -->
+           </div>
+           <!-- Footer Links -->
+           <!-- Footer Bottom -->
+           <div class="container">
+             <div class="row">
+               <div class="col-md-6">
+                 <div class="footer-social">
+                   <ul>
+                     <li><a href="https://www.facebook.com/organizeindm/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.linkedin.com/company/3273657/admin/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.facebook.com/organizeindm/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.youtube.com/channel/UCAuvWg57vxGiRcyRV9p3Avw/videos"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                   </ul>
+                 </div>
+               </div>
+               <div class="col-md-6">
+                 <div class="footer-copyright">
+                   <p>© 2022 <a href="#">Organizein Internet Marketing Solutions Pvt Ltd </a></p>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- Copyright -->
+ 
+         </footer>
+         <!-- Footer -->
+         </div>
+       </section>
+      </div>
+
+      <script>
+         let export__as = document.querySelector('.SElect___head')
+         let _PDF = document.querySelectorAll('.PDF');
+         for(_PDF2 of _PDF){
+            _PDF2.onclick = function(){
+               export__as.innerHTML = this.textContent;
+            }
+         }
+         function toggle(){
+            let Wraper___popup1 = document.querySelector('.Wraper___popup1');
+            let middle__body = document.querySelector('.middle__body');
+            let body = document.getElementsByTagName('body');
+            Wraper___popup1.classList.toggle('active__popup__1');
+            middle__body.classList.toggle('middle__body2');
+            body.classList.toggle('middle__body2');
+         }
+         function toggle2(){
+            let Wraper__popup2 = document.querySelector('.Wraper__popup2');
+            let middle__body = document.querySelector('.middle__body');
+            let body = document.getElementsByTagName('body');
+            Wraper__popup2.classList.toggle('active__popup__2');
+            middle__body.classList.toggle('middle__body2');
+            body.classList.toggle('middle__body2');
+         }
+         function zindex(){
+            let middle__body = document.querySelector('.middle__body');
+            middle__body.classList.toggle('middle__body2');
+         }
+
+
+         let export__as2 = document.querySelector('.SElect___head2')
+         let __PDF2 = document.querySelectorAll('.PDF2');
+         for(x of __PDF2){
+            x.onclick = function () {
+               export__as2.innerHTML = this.textContent;
+            }
+         }
+
+
+         let export__as3 = document.querySelector('.SElect___head3')
+         let _PDF3 = document.querySelectorAll('.PDF3');
+         for(y of _PDF3){
+            y.onclick = function(){
+               export__as3.innerHTML = this.textContent;
+            }
+         }
+
+         let export__as4 = document.querySelector('.SElect___head4')
+         let _PDF4 = document.querySelectorAll('.PDF4');
+         for(z of _PDF4){
+            z.onclick = function(){
+               export__as4.innerHTML = this.textContent;
+            }
+         }
+
+         let export__as5 = document.querySelector('.SElect___head5')
+         let _PDF5 = document.querySelectorAll('.PDF5');
+         for(a of _PDF5){
+            a.onclick = function(){
+               export__as5.innerHTML = this.textContent;
+            }
+         }
+
+         let export__as6 = document.querySelector('.SElect___head6')
+         let _PDF6 = document.querySelectorAll('.PDF6');
+         for(b of _PDF6){
+            b.onclick = function(){
+               export__as6.innerHTML = this.textContent;
+            }
+         }
+
+         let export__as7 = document.querySelector('.SElect___head7')
+         let _PDF7 = document.querySelectorAll('.PDF7');
+         for(c of _PDF7){
+            c.onclick = function(){
+               export__as7.innerHTML = this.textContent;
+            }
+         }
+      </script>
+
+      <script>
+         var two___inde = document.querySelector('.two___inde');
+         var first____in = document.querySelector('.first____in');
+         var third = document.querySelector('.third');
+         var forth = document.querySelector('.forth');
+         var fifth = document.querySelector('.fifth');
+         var sixth = document.querySelector('.sixth');
+         var seventh = document.querySelector('.seventh');
+         function twoinde(){
+            two___inde.classList.add('indicatior__');
+            two___inde.classList.add('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function first(){
+            first____in.classList.add('indicatior__');
+            first____in.classList.add('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function threeinde(){
+            third.classList.add('indicatior__');
+            third.classList.add('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function forthinde(){ 
+            forth.classList.add('indicatior__');
+            forth.classList.add('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function fifthinde(){
+            fifth.classList.add('indicatior__');
+            fifth.classList.add('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function sixthinde(){
+            sixth.classList.add('indicatior__');
+            sixth.classList.add('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+            seventh.classList.remove('indicatior__');
+            seventh.classList.remove('active');
+         }
+         function seventhinde(){
+            seventh.classList.add('indicatior__');
+            seventh.classList.add('active');
+            sixth.classList.remove('indicatior__');
+            sixth.classList.remove('active');
+            fifth.classList.remove('indicatior__');
+            fifth.classList.remove('active');
+            forth.classList.remove('indicatior__');
+            forth.classList.remove('active');
+            third.classList.remove('indicatior__');
+            third.classList.remove('active');
+            first____in.classList.remove('indicatior__');
+            first____in.classList.remove('active');
+            two___inde.classList.remove('indicatior__');
+            two___inde.classList.remove('active');
+         }
+      </script>
+
+
+      <!-- <script>
+         let currentLocation = location.li;
+         let menuItem = document.querySelectorAll('.b');
+         let menuLength = menuItem.length;
+         for(let i = 0; i < menuLength; i++){
+            if(menuItem[i].li === currentLocation){
+               menuItem[i].className = "indicatior__"
+            }
+         }
+         
+      </script> -->
+
+
+
+
+
+      <script src="js/jquerymain_jquerytouch_jquerycookies.js"></script>
+      <script src="js/bootstrap_popper.min.js"></script>
+      <script src="js/jquery_ui.min.js"></script>
+      <script src="js/grid_stack_pack.min.js"></script>
+      <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+      <script src="js/plugins/chartjs/Chart.bundle.min.js"></script>
+      <script src="js/plugins/colorpicker/bootstrap-colorpicker-plus.min.js"></script>
+      <script src="js/plugins/toaster/jquery.toaster.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/page-level/chartjs/linechart1.js"></script>
+      <script src="js/page-level/chartjs/donutchart1.js"></script>
+      <script src="js/page-level/chartjs/barchart1.js"></script>
+
+
+
+
+
+   </body>
+</html>

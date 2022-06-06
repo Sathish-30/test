@@ -1,0 +1,238 @@
+/* *********************** poopins font ************************ */
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Merriweather:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik&display=swap');
+
+/* ****************** custom css  ******************** */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-color-all:#f0f6ff;
+    --linner-left-site-color: linear-gradient(393deg, rgba(90,120,228,1) 15%, rgba(72,164,212,1) 100%);
+    --main-font : 'Poppins', sans-serif;
+    --white-color: #fff;
+    --hreader-color: #5D8bd1;
+}
+.Wraper{
+    width: 100% !important;
+    overflow: hidden !important;
+    background: var(--background-color-all);
+}
+.left_____W{
+    position: relative;
+}
+.logo___{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.left___site{
+    background: var(--linner-left-site-color);
+    width: 104% ;
+    height: 100vh;
+    display: flex;
+    justify-content: start !important;
+    align-items: center;
+    flex-basis: 25%;
+}
+.Overly____div{
+    width: 85% !important;
+    height: 80vh !important;
+    background:rgba(255,255,255,0.09);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    justify-content: start !important;
+    align-items: center;
+}
+.left___text{
+    width: 120% !important;
+    padding-left: 20px;
+}
+.left___text h3{
+    font-family: var(--main-font);
+    font-weight: bold;
+    color: var(--white-color);
+    padding: 20px 0;
+    font-size: 1.5rem;
+}
+.left___text p {
+    font-family: var(--main-font);
+    color: var(--white-color);
+    font-size: 13px;
+    line-height: 1.8;
+}
+.right___site{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    flex-basis: 75%;
+}
+.main__box{
+    text-align: start !important;
+    margin: 20px 0;
+    
+}
+.main__box h5{
+    color: var(--hreader-color);
+    font-family: var(--main-font);
+    padding: 10px 0;
+    font-size: 18px;
+    
+}
+.main__box form{
+    background: var(--white-color);
+    padding: 12px 25px !important;
+    width: 400px !important;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 5px rgb(131 131 131 / 50%);
+}
+@media (max-width:767px) {
+    .main__box form{
+        width: 400px !important;
+        margin: 0 auto !important;
+    }
+    .right___site{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .left___site{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .Overly____div{
+       height: 100% !important;
+    }
+    .left___text h3{
+        padding-left: 20px !important;
+    }
+    .left___text p {
+        padding-left: 20px !important;
+    }
+    .logo___{
+        left: 20px !important;
+    }
+}
+@media (max-width:400px) {
+    .main__box form{
+        width: 90vw !important;
+        margin: 0 auto !important;
+    }
+}
+.main__box form label{
+    font-size: 17px;
+    font-family: var(--main-font);
+    color: rgb(61, 61, 61);
+    padding: 9px 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.main__box form input{
+    outline: none;
+    width: 90%;
+    margin-left: 15px;
+    border: none;
+    font-family: var(--main-font);
+    font-size: 14px !important;
+
+}
+.main__box form input::placeholder{
+    font-size: 12px !important;
+}
+.main__box form span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start !important;
+    border: 1px solid rgba(65, 65, 65, 0.637);
+    padding: 1px 6px;
+    margin-bottom: 3px !important;
+    border-radius: 5px;
+}
+.main__box form span a{
+    display: flex;
+    flex-direction: column;
+}
+.main__box form span i.fa-user {
+    color: gray;
+    font-size: 15px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+.main__box form span a i{
+    font-size: 15px !important;
+    color: gray;
+}
+.main__box form span a i.top__dot{
+    margin-top: 5px !important;
+    font-size: 15px !important;
+}
+.main__box form span a i.bottom__dot{
+    margin-top: -5px !important;
+    margin-bottom: 5px;
+    font-size: 15px !important;
+}
+.forget___pass{
+    text-align: end !important;
+    margin: 5px 0;
+}
+.forget___pass a{
+    font-size: 12px;
+}
+.submit__btn {
+    width: 100% !important;
+    margin: 8px 0;
+    padding: 8px 0;
+    margin-left: 0 !important;
+    background: gray;
+    color: var(--white-color);
+    font-family: var(--main-font) !important;
+    border-radius: 4px;
+}
+.active__{
+    background: var(--hreader-color) !important;
+}
+.or____{
+    color: var(--hreader-color);
+    position: relative;
+    margin: 10px 0;
+}
+.or____::before{
+    width: 50%;
+    height: 2px;
+    background: rgba(128, 128, 128, 0.300);
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 50%;
+}
+.or____::after{
+    width: 50%;
+    height: 2px;
+    background: rgba(128, 128, 128, 0.300);
+    content: '';
+    position: absolute;
+    right: -25px;
+    top: 50%;
+}
+.google___link {
+    border:1px solid #000000b8;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+.google___link a{
+    text-decoration: none;
+    color: #000;
+    font-family: var(--main-font);
+    font-size: 13px;
+
+}
+.create___account{
+    font-size: 13px !important;
+    margin: 15px 0;
+}
